@@ -202,7 +202,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Ответить"/>
                                         <connections>
-                                            <action selector="multipleButtonAnswerPressed" destination="atw-7F-lVY" eventType="touchUpInside" id="TSS-B9-G7Y"/>
+                                            <action selector="multipleAnswerButtonPressed" destination="atw-7F-lVY" eventType="touchUpInside" id="mpb-WZ-Pnz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -236,7 +236,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Ответить"/>
                                         <connections>
-                                            <action selector="rangedButtonAnswerPressed" destination="atw-7F-lVY" eventType="touchUpInside" id="VyN-bD-1x6"/>
+                                            <action selector="rangedAnswerButtonPressed" destination="atw-7F-lVY" eventType="touchUpInside" id="zhz-Zk-zRo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -281,7 +281,7 @@
                     <connections>
                         <outlet property="multipleStackView" destination="ed2-4h-Mji" id="wtx-7y-gmC"/>
                         <outlet property="questionLabel" destination="sg0-jU-z5J" id="GWJ-7j-OOa"/>
-                        <outlet property="questionProgressView" destination="Pl2-S3-0iI" id="BTI-UK-0dW"/>
+                        <outlet property="questionProgressView" destination="Pl2-S3-0iI" id="Ane-XX-0RN"/>
                         <outlet property="rangedSlider" destination="tft-5f-roh" id="aJJ-TC-omh"/>
                         <outlet property="rangedStackView" destination="sIK-i9-jVU" id="qS0-iD-alq"/>
                         <outlet property="singleStackView" destination="rS3-6O-EP8" id="9Br-hu-JcV"/>
@@ -299,7 +299,7 @@
                         <outletCollection property="multipleSwitches" destination="pfd-3A-rZm" collectionClass="NSMutableArray" id="h13-gl-5RA"/>
                         <outletCollection property="rangedLabels" destination="xRo-XO-fqp" collectionClass="NSMutableArray" id="ms6-dH-vVA"/>
                         <outletCollection property="rangedLabels" destination="922-9Y-dco" collectionClass="NSMutableArray" id="pi6-jD-pv0"/>
-                        <segue destination="Jsr-Mz-vzn" kind="show" identifier="shoeResult" id="8t1-sy-ytM"/>
+                        <segue destination="Jsr-Mz-vzn" kind="show" identifier="showResult" id="8t1-sy-ytM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNX-49-JoV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -309,22 +309,22 @@
         <!--Результат-->
         <scene sceneID="kCq-RR-l78">
             <objects>
-                <viewController id="Jsr-Mz-vzn" customClass="ResoltsViewController" customModule="PersonalQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jsr-Mz-vzn" customClass="ResultsViewController" customModule="PersonalQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q6p-FY-NFE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="NET-eI-X0j">
-                                <rect key="frame" x="16" y="231.5" width="288" height="105"/>
+                                <rect key="frame" x="16" y="260.5" width="288" height="47.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы - 🐶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIE-tF-BSE">
-                                        <rect key="frame" x="97.5" y="0.0" width="93" height="33.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIE-tF-BSE">
+                                        <rect key="frame" x="113.5" y="0.0" width="61" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ырар рарооыиоа отлоы оооиои  т тор ора о о о ро ор   о  от о   о  аоа тбыфв  о ты воа   о ыврарцоу т  т л " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNu-3V-OMk">
-                                        <rect key="frame" x="0.0" y="47.5" width="288" height="57.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNu-3V-OMk">
+                                        <rect key="frame" x="144" y="47.5" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -347,11 +347,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="animalTypeLabel" destination="eIE-tF-BSE" id="XZW-TK-otH"/>
+                        <outlet property="descriptionLabel" destination="XNu-3V-OMk" id="EtO-GG-gcf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46G-xr-onh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="HvJ-5i-srd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2368" y="83"/>
+            <point key="canvasLocation" x="2351" y="82"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8wT-ue-MQf">
